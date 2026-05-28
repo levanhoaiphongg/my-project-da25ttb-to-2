@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+ <html lang="Vi">
+	<head>
+		<title>THIẾT KẾ FORM ĐĂNG KÝ</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="../css/style02.css">
+	</head>
+	<body>
+		<div class ="container">
+		 <form id="dk">
+			<h2 id="title">ĐĂNG KÝ</h2>
+			<div class="form-group">
+				<label for="txtUsername">Họ và tên:</label>
+				<input class="form-control" type ="text" id="txtUsername" name="txtUsername">
+			</div>
+			
+			<div class ="form-group">
+				<label for="txtpassword">Mật khẩu:</label>
+				<input class="form-control" type ="password" id="txtpassword" name="txtpassword">
+			</div>
+			
+			<div class ="form-group">
+				<label for="txtDate">Ngày tháng năm sinh:</label>
+				<input type="date">
+			</div>
+			
+			<div class="form-group">
+				<label for="txtEmail">Email:</label>
+				<input class="form-control" type ="text" id="txtEmail" name="txtEmail">
+			</div>
+			
+			<div class="form-group">
+				<label for="address">Địa chỉ:</label>
+				<input class="form-control" type="text" id="txtAddress" name="txtAddress">
+			</div>
+			
+			<div>
+			<label>
+				<label>Giới tính:
+					<input class="form-control" type ="radio" id="rdNam" name="rdGioitinh" value="1" checked>
+					</label for ="rdNam">Nam
+					<label>
+					<input class="form-control" type ="radio" id="rdNu" name="rdGioitinh" value="2" checked>
+						Nữ
+					</label>
+				</label>
+			</div>
+			
+			<div>
+				<label>
+				<p>Môn thể thao yêu thích:</p>
+				<input type="checkbox" name="cbSothich" value="Bóng đá"checked>Bóng đá
+				<input type="checkbox" name="cbSothich" value="Cầu lông"checked>Cầu lông
+				<input type="checkbox" name="cbSothich" value="Bóng bàn"checked>Bóng bàn
+				</label>
+			</div>
+			
+				<input class ="button" type ="submit" id="sbLogin" name="sbLogin" value ="Đăng ký">
+				<input class="button" type ="reset" id="rsCancle" name="rsCancle" value ="Hủy">
+		 </form>
+		</div>
+	</body>
+ </html>
+ 
