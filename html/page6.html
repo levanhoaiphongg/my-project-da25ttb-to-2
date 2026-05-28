@@ -22,7 +22,7 @@
             <td  class="soluong">10</td>
             <td  class="dongia">5000</td>
             <td>Gói</td>
-            <td   class="thanhtien">5000</td>
+            <td   class="thanhtien"></td>
         </tr>
 
         <tr>
@@ -31,16 +31,16 @@
             <td  class="soluong">10</td>
             <td  class="dongia">7000</td>
             <td>bịch</td>
-            <td  class="thanhtien">7000</td>
+            <td  class="thanhtien"></td>
         </tr>
 
         <tr>
             <td>3</td>
             <td  class="tenhang">gạo nếp</td>
             <td  class="soluong">10</td>
-            <td  class="tenhang">30000</td>
+            <td  class="dongia">30000</td>
             <td>bao</td>
-            <td  class="thanhtien">30000</td>
+            <td  class="thanhtien"></td>
         </tr>
 
         <tr>
@@ -49,7 +49,7 @@
             <td  class="soluong">10</td>
             <td  class="dongia">8000</td>
             <td>bịch</td>
-            <td  class="thanhtien">20000</td>
+            <td  class="thanhtien"></td>
         </tr>
 
         <tr>
@@ -58,16 +58,16 @@
             <td  class="soluong">10</td>
             <td  class="dongia">150000</td>
             <td>Chai</td>
-            <td  class="thanhtien">150000</td>
+            <td  class="thanhtien"></td>
         </tr>
 
         <tr>
             <td>6</td>
             <td  class="tenhang">coca cola</td>
             <td  class="soluong">2</td>
-            <td  class="dongia">9500</td>
+            <td  class="dongia">10000</td>
             <td>Chai</td>
-            <td  class="thanhtien">19000</td>
+            <td  class="thanhtien"></td>
         </tr>
 
         <tr>
@@ -76,7 +76,7 @@
             <td  class="soluong">6</td>
             <td  class="dongia">10000</td>
             <td>Lon</td>
-            <td  class="thanhtien">60000</td>
+            <td  class="thanhtien"></td>
         </tr>
 
         <tr>
@@ -85,7 +85,7 @@
             <td  class="soluong">6</td>
             <td  class="dongia">10000</td>
             <td>Lon</td>
-            <td  class="thanhtien">60000</td>
+            <td  class="thanhtien"></td>
         </tr>
 
         <tr>
@@ -94,7 +94,7 @@
             <td  class="soluong">4</td>
             <td  class="dongia">10000</td>
             <td>Chai</td>
-            <td  class="thanhtien">60000</td>
+            <td  class="thanhtien"></td>
         </tr>
 
         <tr>
@@ -103,18 +103,29 @@
             <td  class="soluong">3</td>
             <td  class="dongia">15000</td>
             <td>Bịch</td>
-            <td  class="thanhtien">75000</td>
+            <td  class="thanhtien"></td>
         </tr>
     </table>
    <script>
-    const sl=document.getElementsByClassName("soluong");
-    const dg=document.getElementsByClassName("dongia");
-    const tt=document.getElementsByClassName("thanhtien");
-    let tongthanhtoan=0;
-    for(let i=0;i<sl;i++)
-   {
-    let soluong=
-   }
+    const sl = document.getElementsByClassName("soluong");
+    const dg = document.getElementsByClassName("dongia");
+    const tt = document.getElementsByClassName("thanhtien");
+
+    let tongthanhtoan = 0;
+
+    for(let i = 0; i < sl.length; i++)
+     {
+        let soluong = Number(sl[i].innerHTML);
+        let dongia = Number(dg[i].innerHTML);
+
+        let thanhtien = soluong * dongia;
+
+        tt[i].innerHTML = thanhtien;
+
+        tongthanhtoan += thanhtien;
+     }
+
+    document.write("<h2>Tổng thanh toán: " + tongthanhtoan + " VNĐ</h2>");
    </script>
-</body>
+ </body>
 </html>
