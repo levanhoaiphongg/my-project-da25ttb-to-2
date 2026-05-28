@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  *{
 	 margin:0;
 	 padding:0;
@@ -66,4 +67,74 @@ body{
         #a1c4fd 75%,
         #fddb92 100%
     );
+=======
+ *{
+	 margin:0;
+	 padding:0;
+	 font-family:Arial,Helvetica,sans-serif;
+	 font-size:13pt;
+	 line-height:2;
+	 color:rgb(197, 0, 99);
+ }
+ .container{
+	 margin:0px 50px;
+ }
+ form#dk{
+	 background-color:#dfe9f3;;
+	 padding:20px 50px;
+	 max-width:500px;
+	 width:100%;
+	 margin:150px auto;
+ }
+ #title{
+	 text-transform:uppercase;
+	 text-align:center;
+ }
+ label{
+	 display:block;
+	 
+	 font-weight:bolder;
+ }
+ .form-control{
+	 width:100%;
+	 margin:4px 0px;
+ }
+ .button{
+    background-color:rgb(0, 154, 151);
+	 margin:4px 0x;
+	 padding:2px;
+	 width:100px;
+	 color:white;
+	 border-radius:5px;
+	 
+	 background:linear-gradient(
+        135deg,
+        #4facfe,
+        #00c6fb
+    );
+ }
+
+.button:hover{
+    background:linear-gradient(
+        135deg,
+        #43e97b,
+        #38f9d7
+    );
+
+    transform:translateY(-2px);
+
+    box-shadow:0 6px 15px rgba(0,0,0,0.25);
+}
+body{
+    height:100vh;
+
+    background:linear-gradient(
+        120deg,
+        #c2e9fb 0%,
+        #d4fc79 25%,
+        #fbc2eb 50%,
+        #a1c4fd 75%,
+        #fddb92 100%
+    );
+>>>>>>> d0ed54b6c5e6538066c561101b7270515fd67748
 }
