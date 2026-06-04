@@ -1,0 +1,28 @@
+#container-product-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+   
+}
+
+.container-item{
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color:
+        #eee8e1;
+    
+}
+body{
+    background:#f9ffa3;
+}
+.container-item{
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.container-item:hover{
+    background-color: #67ffeb;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}

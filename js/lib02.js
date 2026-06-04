@@ -1,14 +1,4 @@
-function inBCC(n)
-{
-    let result= "";
-    let i=1;
-    while(i<=10)
-    {
-    result+=`${n}x${i}=${n*i}<br>`;
-    i++;
-    }
-    document.getElementById("result").innerHTML=result;
-}
+
 /*Mã nguồn Javacript*/
 function inBCC(n)
 {
@@ -40,6 +30,7 @@ function addItem(name, price, description, link, image)
     imageProduct.setAttribute("src", image);//truyền tham số image
     imageProduct.setAttribute("alt", name);
     imageProduct.setAttribute("style", "width:100%; max-width:150px;");
+    containerImage.style.textAlign = "center";
 
     //Chèn đối tưởng ảnh vào khung chứa ảnh
     containerImage.appendChild(imageProduct);
@@ -47,13 +38,21 @@ function addItem(name, price, description, link, image)
     //Tạo khung chứa container-info
     const containerInfo = document.createElement("div");
     containerInfo.setAttribute("class", "container-info");
+    containerInfo.style.textAlign = "center";
 
     //Tạo 4 con
     const nameProduct = document.createElement("p");
     nameProduct.innerHTML = name;
+    nameProduct.style.color = "#ff0202ff";
 
-    const priceProduct = document.createElement("p");
+    const priceProduct = document.createElement("div");
     priceProduct.innerHTML = price;
+    priceProduct.style.backgroundColor = "green";
+    priceProduct.style.color = "white";
+    priceProduct.style.padding = "5px 10px";
+    priceProduct.style.borderRadius = "5px";
+    priceProduct.style.display = "inline-block";
+    priceProduct.style.margin = "10px 0";
 
     const descProduct = document.createElement("p");
     descProduct.innerHTML = description;
