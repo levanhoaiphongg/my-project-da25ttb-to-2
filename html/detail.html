@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Chi tiết sản phẩm</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/detail.css">
+    
+</head>
+<body>
+
+<div class="container mt-4 text-center">
+    <h2 id="name" class="text-danger fw-bold"></h2>
+
+    <img id="img" class="img-fluid d-block mx-auto my-3 product-img">
+
+    <h4 id="price" class="text-info fw-bold"></h4>
+
+    <p id="desc" class="text-danger fs-5"></p>
+
+</div>
+
+<script>
+const products = {
+    oi: {
+        name: "TRÁI ỔI",
+        price: "250000đ",
+        desc: "Thơm, ngọt dịu, giòn",
+        img: "../assets/images/oi.jpg"
+    },
+    man: {
+        name: "TRÁI MẬN",
+        price: "300000đ",
+        desc: "Giòn, ngọt chua thanh",
+        img: "../assets/images/man.jpg"
+    },
+    dualuoi: {
+        name: "TRÁI DƯA LƯỚI",
+        price: "270000đ",
+        desc: "Ngọt, giòn, thơm đặc trưng",
+        img: "../assets/images/dualuoi.jpg"
+    },
+    saurieng: {
+        name: "TRÁI SẦU RIÊNG",
+        price: "300000đ",
+        desc: "Ngọt mềm, thơm nồng",
+        img: "../assets/images/saurieng.jpg"
+    },
+    cherry: {
+        name: "TRÁI CHERRY",
+        price: "400000đ",
+        desc: "Ngọt chua, hàng nhập khẩu",
+        img: "../assets/images/cherry.jpg"
+    },
+    tao: {
+        name: "TRÁI TÁO",
+        price: "250000đ",
+        desc: "GIÒN,XỐP,CHUA NHẸ,HÀNG MỸ",
+        img: "../assets/images/tao.jpg"
+    },
+    nho: {
+        name: "TRÁI NHO",
+        price: "300000đ",
+        desc: "NGỌT GẮT, MỀM,NHIỀU VITAMIN",
+        img: "../assets/images/nho.jpg"
+    },
+    vietquoc: {
+        name: "TRÁI VIỆT QUỐC",
+        price: "350000đ",
+        desc: "CHUA MỀM,NGỌT NHẸ,HƯƠNG THƠM NHẸ",
+        img: "../assets/images/vietquoc.jpg"
+    },
+};
+
+// lấy query ?id=
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+// tìm sản phẩm
+const p = products[id];
+
+if (p) {
+    document.getElementById("name").innerText = p.name;
+    document.getElementById("price").innerText = p.price;
+    document.getElementById("desc").innerText = p.desc;
+    document.getElementById("img").src = p.img;
+} else {
+    document.body.innerHTML = "<h2>Không tìm thấy sản phẩm</h2>";
+}
+</script>
+
+</body>
+</html>

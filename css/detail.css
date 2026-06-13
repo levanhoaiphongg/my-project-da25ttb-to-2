@@ -1,0 +1,11 @@
+.product-img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.product-img:hover {
+    transform: scale(1.05);
+}
